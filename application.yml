@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: ${project0URL}
+    username: ${project0Username}
+    password: ${project0Password}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: false
+      temp:
+        use_jdbc_metadata_defaults: false
